@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Watson - Web Designer & Photographer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        body {
+            background: 
+                linear-gradient(rgba(33, 66, 87, 0.85), rgba(33, 66, 87, 0.85)),
+                url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat fixed;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            color: white;
+        }
+        .image-placeholder {
+            background: url('./assets/profile-image.jpg') center/cover;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">JW Portfolio</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-buttons">
+            <button class="hire-btn">Hire Me</button>
+            <div class="theme-toggle">🌙</div>
+        </div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1 class="title animate-pop-in">Hi, I'm <span class="highlight">John Watson</span></h1>
+                <h2 class="subtitle animate-pop-in">Web Designer</h2>
+                <p class="description animate-pop-in">I love Graphic design and Photography and have been working on my portfolio since 2016. I can give your business a new Creative start right away!</p>
+                <button class="cta-button animate-pop-in">Hire Me</button>
+            </div>
+            <div class="hero-image animate-slide-in">
+                <div class="image-wrapper">
+                    <div class="image-placeholder"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+<!-- biography section -->
+<section class="biography-section" id="about">
+    <div class="biography-container">
+        <div class="profile-image-container">
+            <img src="assets/profile-image.jpg" alt="John Watson" class="profile-image">
+            <div class="image-overlay"></div>
+        </div>
+        <div class="biography-content">
+            <h2 class="section-title">MY BIOGRAPHY</h2>
+            <h1 class="main-title">A Lead UI Designer & Web Developer</h1>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Based In UK</p>
+            <p class="description">I love Graphic design and Photography and have been working on my portfolio since 2016. I Can give your business a new Creative start right away! Contact me and we will discuss your projects!</p>
+            
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-user"></i>
+                    <span>Name: John Watson</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email: example@mail.com</span>
+                </div>
+            </div>
+
+            <button class="cta-button hire-btn">Hire Me</button>
+        </div>
+    </div>
+</section>
+<!-- services section -->
+<section class="services-section" id="services">
+    <div class="container">
+        <h2 class="section-heading">What I Do For You</h2>
+        
+        <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3 class="service-title">Web Development</h3>
+                <p class="service-description">I create responsive, high-performance websites with clean code and modern frameworks that deliver exceptional user experiences.</p>
+                <div class="service-hover-content">
+                    <ul class="service-features">
+                        <li>React & Vue.js Development</li>
+                        <li>Node.js Backend</li>
+                        <li>Responsive Design</li>
+                        <li>SEO Optimization</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Service 2 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3 class="service-title">App Development</h3>
+                <p class="service-description">I build cross-platform mobile applications with Flutter and React Native that work seamlessly across all devices.</p>
+                <div class="service-hover-content">
+                    <ul class="service-features">
+                        <li>iOS & Android Apps</li>
+                        <li>Flutter Development</li>
+                        <li>UI/UX Design</li>
+                        <li>API Integration</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Service 3 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <h3 class="service-title">Photography</h3>
+                <p class="service-description">Professional photography services for products, portraits, and events with expert editing and retouching.</p>
+                <div class="service-hover-content">
+                    <ul class="service-features">
+                        <li>Product Photography</li>
+                        <li>Portrait Sessions</li>
+                        <li>Photo Editing</li>
+                        <li>Commercial Shoots</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="more-services">
+            <a href="#contact" class="more-services-btn">
+                More Services <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- skills section -->
+<section class="skills-section" id="skills">
+    <div class="container">
+        <h2 class="section-title">MY SKILLS</h2>
+        <h3 class="section-subtitle">My Featured Skills</h3>
+        
+        <div class="skills-intro">
+            <p>I specialize in Branding and Strategy, and am passionate about creating awesome portfolio work. I'm always ready to impress the audience with my Creativity.</p>
+        </div>
+        
+        <div class="skills-grid">
+            <!-- Skill 1 -->
+            <div class="skill-card" data-percent="95">
+                <div class="skill-visual">
+                    <div class="skill-circle">
+                        <svg class="circle-chart" viewBox="0 0 36 36">
+                            <path class="circle-bg"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                            <path class="circle-fill"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                                stroke-dasharray="0, 100"
+                            />
+                        </svg>
+                        <div class="skill-percent">95%</div>
+                    </div>
+                </div>
+                <h4 class="skill-name">UI/UX Design</h4>
+            </div>
+            
+            <!-- Skill 2 -->
+            <div class="skill-card" data-percent="90">
+                <div class="skill-visual">
+                    <div class="skill-circle">
+                        <svg class="circle-chart" viewBox="0 0 36 36">
+                            <path class="circle-bg"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                            <path class="circle-fill"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                                stroke-dasharray="0, 100"
+                            />
+                        </svg>
+                        <div class="skill-percent">90%</div>
+                    </div>
+                </div>
+                <h4 class="skill-name">Ideas & Technology</h4>
+            </div>
+            
+            <!-- Skill 3 -->
+            <div class="skill-card" data-percent="85">
+                <div class="skill-visual">
+                    <div class="skill-circle">
+                        <svg class="circle-chart" viewBox="0 0 36 36">
+                            <path class="circle-bg"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                            <path class="circle-fill"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                                stroke-dasharray="0, 100"
+                            />
+                        </svg>
+                        <div class="skill-percent">85%</div>
+                    </div>
+                </div>
+                <h4 class="skill-name">Branding Design</h4>
+            </div>
+            
+            <!-- Skill 4 -->
+            <div class="skill-card" data-percent="92">
+                <div class="skill-visual">
+                    <div class="skill-circle">
+                        <svg class="circle-chart" viewBox="0 0 36 36">
+                            <path class="circle-bg"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                            <path class="circle-fill"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                                stroke-dasharray="0, 100"
+                            />
+                        </svg>
+                        <div class="skill-percent">92%</div>
+                    </div>
+                </div>
+                <h4 class="skill-name">Responsive Web Design</h4>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- work section -->
+<section class="services-component" id="services-grid">
+    <div class="container">
+        <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3 class="service-title">Web Development</h3>
+                <p class="service-description">Lorem ipsum viverra libero set. Pellen ut justo, in ligula at.</p>
+                <div class="service-hover">
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Service 2 -->
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 class="service-title">Research & Analysis</h3>
+                <p class="service-description">Lorem ipsum viverra libero set. Pellen ut justo, in ligula at.</p>
+                <div class="service-hover">
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Service 3 -->
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3 class="service-title">Responsive Design</h3>
+                <p class="service-description">Lorem ipsum viverra libero set. Pellen ut justo, in ligula at.</p>
+                <div class="service-hover">
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Service 4 -->
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h3 class="service-title">Design Trends</h3>
+                <p class="service-description">Lorem ipsum viverra libero set. Pellen ut justo, in ligula at.</p>
+                <div class="service-hover">
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Service 5 -->
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3 class="service-title">Customer Support</h3>
+                <p class="service-description">Lorem ipsum viverra libero set. Pellen ut justo, in ligula at.</p>
+                <div class="service-hover">
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Service 6 -->
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-layer-group"></i>
+                </div>
+                <h3 class="service-title">PSD Design</h3>
+                <p class="service-description">Lorem ipsum viverra libero set. Pellen ut justo, in ligula at.</p>
+                <div class="service-hover">
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- stats section -->
+<section class="stats-section">
+    <div class="container">
+      <h2 class="stats-heading">Our Achievements</h2>
+      <div class="stats-grid">
+        <div class="stat-card" data-target="135">
+          <div class="stat-icon">🏆</div>
+          <span class="stat-number">0</span>
+          <p class="stat-label">Finished Projects</p>
+        </div>
+        <div class="stat-card" data-target="225">
+          <div class="stat-icon">⏱️</div>
+          <span class="stat-number">0</span>
+          <p class="stat-label">Working Hours</p>
+        </div>
+        <div class="stat-card" data-target="115">
+          <div class="stat-icon">💬</div>
+          <span class="stat-number">0</span>
+          <p class="stat-label">Online Support</p>
+        </div>
+        <div class="stat-card" data-target="272">
+          <div class="stat-icon">😊</div>
+          <span class="stat-number">0</span>
+          <p class="stat-label">Happy Customers</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- My Success Work Section -->
+<section id="success-work" class="success-work-section">
+    <div class="container">
+      <h2 class="section-title">My Success Work</h2>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="assets/workspace-bg.jpg" alt="Work 1">
+        </div>
+        <div class="gallery-item">
+          <img src="assets/office 1.jpg" alt="Work 2">
+        </div>
+        <div class="gallery-item">
+          <img src="assets/lap1.webp" alt="Work 3">
+        </div>
+        <div class="gallery-item">
+          <img src="assets/comp.jpg" alt="Work 4">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Badges Section -->
+<section class="badges-section">
+    <div class="container">
+      <div class="badge-container">
+        <!-- Badge 1: 100% Gluten Free -->
+        <div class="badge">
+          <img src="assets/gluten.avif" alt="100% Gluten Free">
+        </div>
+  
+        <!-- Badge 2: Massage & Spa -->
+        <div class="badge">
+          <img src="assets/massage.png" alt="Massage & Spa">
+        </div>
+  
+        <!-- Badge 3: Butchery -->
+        <div class="badge">
+          <img src="assets/butcher-shop-logo.webp" alt="Butchery">
+        </div>
+  
+        <!-- Badge 4: Natural -->
+        <div class="badge">
+          <img src="assets/natural.webp" alt="Natural">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+      <!-- Contact Information -->
+      <div class="contact-info">
+        <div class="logo-container">
+          <img src="assets/profile-image.jpg" alt="UI Portfolio Logo" class="footer-logo">
+        </div>
+        <div class="contact-details">
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span>+12 345 678 900</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>info@example.com</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>208 Avenue street, UK - 62617</span>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Social Media Links -->
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Google Plus"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+        <a href="#" aria-label="VKontakte"><i class="fab fa-vk"></i></a>
+      </div>
+  
+      <!-- Copyright -->
+      <div class="copyright">
+        <p>© 2025 UI Portfolio. All Rights Reserved</p>
+      </div>
+    </div>
+  
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" aria-label="Scroll to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </footer>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
