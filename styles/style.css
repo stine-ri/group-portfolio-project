@@ -279,8 +279,7 @@ header {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 .image-placeholder {
-    border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    display: none;
 }
 
 /* Animations */
@@ -373,7 +372,7 @@ header {
     }
 
     .image-placeholder {
-        height: 400px;
+        display: none;
     }
     .hero-image {
         max-width: 100%;
@@ -397,7 +396,7 @@ header {
         padding: 15px 20px;
     }
     .image-placeholder {
-        height: 350px;
+        display: none;
     }
     @media (max-width: 576px) {
         .hero {
