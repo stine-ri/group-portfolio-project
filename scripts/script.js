@@ -267,7 +267,7 @@ document.addEventListener('DOMContentLoaded', initServicesGrid);
 // Stats Section - Improved for mobile
 document.addEventListener('DOMContentLoaded', function() {
   const statCards = document.querySelectorAll('.stat-card');
-  let hasAnimated = false; // Track if animation has run
+  let hasAnimated = false; 
 
   // Improved viewport check for mobile
   function isInViewport(element) {
@@ -277,7 +277,7 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // Check if element is visible in viewport (with tolerance for mobile)
       return (
-          rect.top <= windowHeight * 0.75 && // 75% down the viewport
+          rect.top <= windowHeight * 0.75 && 
           rect.left <= windowWidth &&
           rect.bottom >= 0 &&
           rect.right >= 0
@@ -287,19 +287,18 @@ document.addEventListener('DOMContentLoaded', function() {
   // Smoother counting animation
   function animateCount(element, target) {
       let current = 0;
-      const duration = 2000; // 2 seconds duration
-      const increment = target / (duration / 16); // 60fps
+      const duration = 2000; 
+      const increment = target / (duration / 16); 
       
       const timer = setInterval(() => {
           current += increment;
           if (current >= target) {
               clearInterval(timer);
               current = target;
-              element.textContent = target; // Ensure final number is exact
-          } else {
+              element.textContent = target; 
               element.textContent = Math.floor(current);
           }
-      }, 16); // ~60fps
+      }, 16); 
   }
 
   // Handle scroll event with debounce
@@ -338,11 +337,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   });
 });
-    // Initial check in case elements are already visible
-    handleScroll();
-  
-    // Add scroll event listener
-    window.addEventListener('scroll', handleScroll);
+    
 
   // Add interactivity to the gallery items
 const galleryItems = document.querySelectorAll('.gallery-item');
