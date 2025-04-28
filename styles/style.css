@@ -1333,15 +1333,15 @@ work section styling
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .stats-grid {
-        flex-direction: column; /* Stack cards vertically */
-        align-items: center; /* Center cards in column layout */
-        gap: 1.5rem; /* Adjust gap for stacked layout */
-        padding: 0 1rem; /* Add some side padding */
+        flex-direction: column;
+        align-items: center; 
+        gap: 1.5rem;
+        padding: 0 1rem; 
     }
     
     .stat-card {
-        width: 80%; /* Make cards take more width */
-        max-width: 300px; /* But limit maximum width */
+        width: 80%; 
+        max-width: 300px; 
     }
 }
 
