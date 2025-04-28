@@ -8,8 +8,8 @@ This project was developed collaboratively by the following team members:
 
 | Name                  | Role               | Contribution                                                                 | Contact                     |
 |-----------------------|--------------------|------------------------------------------------------------------------------|-----------------------------|
-| Christine Nyambwari   | Lead Developer     | Project architecture, core functionality, theme switching, animations,testing     | christine.nyambwari@email.com |
-| Maryanne Musengy'a    | UI/UX Developer    | Responsive design, content creation, testing, accessibility implementation  | maryannemusengya@email.com |
+| Christine Nyambwari   | Lead Developer     | Project architecture, core functionality, theme switching, animations,testing     | christinenyambwari@gmail.com |
+| Maryanne Musengy'a    | UI/UX Developer    | Responsive design, content creation, testing, accessibility implementation  | maryannemusengya@gmail.com |
 
 ### Key Contributions:
 - **Christine Nyambwari**: 
