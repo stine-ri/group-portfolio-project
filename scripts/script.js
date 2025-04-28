@@ -263,55 +263,87 @@ function initServicesGrid() {
 }
 
 document.addEventListener('DOMContentLoaded', initServicesGrid);
-//stats sections
+
+// Stats Section - Improved for mobile
 document.addEventListener('DOMContentLoaded', function() {
-    const statCards = document.querySelectorAll('.stat-card');
-  
-    // Check if element is in viewport
-    function isInViewport(element) {
+  const statCards = document.querySelectorAll('.stat-card');
+  let hasAnimated = false; // Track if animation has run
+
+  // Improved viewport check for mobile
+  function isInViewport(element) {
       const rect = element.getBoundingClientRect();
+      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+      const windowWidth = window.innerWidth || document.documentElement.clientWidth;
+      
+      // Check if element is visible in viewport (with tolerance for mobile)
       return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+          rect.top <= windowHeight * 0.75 && // 75% down the viewport
+          rect.left <= windowWidth &&
+          rect.bottom >= 0 &&
+          rect.right >= 0
       );
-    }
-  
-    // Animate counting up
-    function animateCount(element, target) {
+  }
+
+  // Smoother counting animation
+  function animateCount(element, target) {
       let current = 0;
-      const increment = target / 50;
+      const duration = 2000; // 2 seconds duration
+      const increment = target / (duration / 16); // 60fps
+      
       const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          clearInterval(timer);
-          current = target;
-        }
-        element.textContent = Math.floor(current);
-      }, 20);
-    }
-  
-    // Handle scroll event
-    function handleScroll() {
-      statCards.forEach(card => {
-        if (isInViewport(card)) {
-          const numberElement = card.querySelector('.stat-number');
-          const target = parseInt(card.getAttribute('data-target'));
-          
-          if (numberElement.textContent === '0') {
-            animateCount(numberElement, target);
+          current += increment;
+          if (current >= target) {
+              clearInterval(timer);
+              current = target;
+              element.textContent = target; // Ensure final number is exact
+          } else {
+              element.textContent = Math.floor(current);
           }
-        }
+      }, 16); // ~60fps
+  }
+
+  // Handle scroll event with debounce
+  function handleScroll() {
+      if (hasAnimated) return;
+      
+      statCards.forEach(card => {
+          if (isInViewport(card)) {
+              const numberElement = card.querySelector('.stat-number');
+              const target = parseInt(card.getAttribute('data-target'));
+              
+              if (numberElement.textContent === '0') {
+                  animateCount(numberElement, target);
+              }
+          }
       });
-    }
+      
+      // Check if all cards have been animated
+      const allAnimated = Array.from(statCards).every(card => {
+          return card.querySelector('.stat-number').textContent !== '0';
+      });
+      
+      if (allAnimated) {
+          hasAnimated = true;
+          window.removeEventListener('scroll', handleScroll);
+      }
+  }
+
+  // Initial check in case elements are already visible
+  handleScroll();
   
+  // Add scroll event listener with debounce
+  window.addEventListener('scroll', function() {
+      if (!hasAnimated) {
+          window.requestAnimationFrame(handleScroll);
+      }
+  });
+});
     // Initial check in case elements are already visible
     handleScroll();
   
     // Add scroll event listener
     window.addEventListener('scroll', handleScroll);
-  });
+
   // Add interactivity to the gallery items
 const galleryItems = document.querySelectorAll('.gallery-item');
 
